@@ -2,60 +2,103 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rinterio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rinterio</title>
 
-    <!-- tailwind and daisyUI CDN -->
+  <!-- tailwind and daisyUI CDN -->
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <!-- google fonts link -->
-    <script src="https://kit.fontawesome.com/45f7665e19.js" crossorigin="anonymous"></script>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <!-- google fonts link -->
+  <script src="https://kit.fontawesome.com/45f7665e19.js" crossorigin="anonymous"></script>
 
-    <style>
-        .font-manrope{
-            font-family: "Manrope", sans-serif;
-        }
-    </style>
+  <style>
+    .font-manrope {
+      font-family: "Manrope", sans-serif;
+    }
+  </style>
 
-    <!--custom color tailwind script -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              clifford: '#da373d',
-              'p-color':'#494949',
-              'banner-button-bg': 'rgba(171, 239, 95, 0.5)',
-              'button-color': 'rgb(171, 239, 95)',
-            }
+  <!--custom color tailwind script -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'p-color': '#494949',
+            'banner-button-bg': 'rgba(171, 239, 95, 0.5)',
+            'button-color': 'rgb(171, 239, 95)',
+            'about-bg': 'rgb(244, 244, 244)'
           }
         }
       }
-    </script>
+    }
+  </script>
 
 </head>
 
-<body class="font-manrope max-w-screen-2xl mx-auto px-4 md:px-6 lg:px-10">
-    <header class="container">
-      <!-- banner section -->
-       <div class="banner-section w-11/12 mx-auto text-center space-y-7">
-        <div class="banner-img flex justify-center">
-          <img src="/assets/banner.png" alt="">
+<body class="font-manrope">
+  <header class="container mx-auto px-4 md:px-6 lg:px-16">
+    <!-- banner section -->
+    <div class="banner-section w-11/12 mx-auto text-center space-y-7">
+      <div class="banner-img flex justify-center">
+        <img src="/assets/banner.png" alt="">
+      </div>
+      <h2 class="text-3xl md:text-4xl lg:text-6xl font-extrabold">A barn house of this design has a striking appearance
+      </h2>
+      <p class="font-medium text-xl text-p-color">The barn house captivates with its blend of rustic charm and modern
+        sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with
+        natural light.</p>
+      <button class="btn btn-outline bg-banner-button-bg border-2 border-button-color font-bold text-base">View Details
+        <span><i class="fa-solid fa-arrow-right bg-button-color p-2 rounded-full -rotate-45"></i></span></button>
+    </div>
+  </header>
+
+  <!-- ................main section................... -->
+  <main>
+    <!-- about us section -->
+    <div class="about-us-section py-12 md:py-24 mt-12 md:mt-24 bg-about-bg">
+      <div class="container mx-auto px-4 md:px-6 lg:px-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="text-content space-y-6">
+            <div class="relative">
+              <button class="btn btn-sm bg-white rounded-3xl"><i class="fa-solid fa-arrow-right"></i> About Us</button>
+              <img class="absolute -top-16 -left-16" src="/assets/Vector.png" alt="">
+            </div>
+            <h2 class="font-bold text-2xl lg:text-4xl">We design thoughtful, <br> liveable spaces</h2>
+            <p>The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal accents.</p>
+            <div class="about-items space-y-5">
+              <div class="card flex flex-row gap-5 md:items-center bg-white rounded-lg p-6">
+                <img class="md:w-16 h-12 md:h-full" src="/assets/commercial.png" alt="">
+                <div class="space-y-3">
+                  <h4 class="font-extrabold text-xl ">Commercial</h4>
+                  <p class="font-medium text-base  text-[#737373]">The barn house captivates with its blend of rustic charm and modern.</p>
+                </div>
+              </div>
+              <div class="card flex flex-row gap-5 md:items-center bg-white rounded-lg p-6">
+                <img class="md:w-16 h-12 md:h-full" src="/assets/residential.png" alt="">
+                <div class="space-y-3">
+                  <h4 class="font-extrabold text-xl ">Residential</h4>
+                  <p class="font-medium text-base  text-[#737373]">The barn house captivates with its blend of rustic charm and modern.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="image-content">
+            <img src="/assets/Rectangle.png" alt="Album" />
+          </div>
         </div>
-        <h2 class="text-3xl md:text-4xl lg:text-6xl font-extrabold">A barn house of this design has a striking appearance</h2>
-        <p class="font-medium text-xl text-p-color">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
-        <button class="btn btn-outline bg-banner-button-bg border-2 border-button-color font-bold text-base">View Details <span><i class="fa-solid fa-arrow-right bg-button-color p-2 rounded-full -rotate-45"></i></span></button>
-       </div>
-    </header>
-    <main></main>
-    <footer></footer>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
 </body>
 
 </html>
