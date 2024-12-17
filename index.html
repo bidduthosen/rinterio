@@ -22,6 +22,9 @@
     .font-manrope {
       font-family: "Manrope", sans-serif;
     }
+    ul> li:first-child{
+      color: black;
+    }
   </style>
 
   <!--custom color tailwind script -->
@@ -34,7 +37,8 @@
             'p-color': '#494949',
             'banner-button-bg': 'rgba(171, 239, 95, 0.5)',
             'button-color': 'rgb(171, 239, 95)',
-            'about-bg': 'rgb(244, 244, 244)'
+            'about-bg': 'rgb(244, 244, 244)',
+            'nav-border': 'rgb(255, 255, 255)'
           }
         }
       }
@@ -44,6 +48,61 @@
 </head>
 
 <body class="font-manrope">
+  <!-- navbar -->
+   <nav class="">
+    <div class="container mx-auto px-4 md:px-6 lg:px-16 ">
+      <div class="navbar">
+        <div class="navbar-start">
+          <h4 class="lg:font-extrabold text-base lg:text-3xl text-black"><span><i class="fa-solid fa-arrow-right text-black mr-2 bg-button-color p-2 rounded-full -rotate-45 ml-2"></i></span> RINTERIO</h4>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 text-[#737373]">
+            <li><a>Home</a></li>
+            <li><a>Portfolio</a></li>
+            <li><a>Blogs</a></li>
+            <li><a>Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end space-x-4">
+          <div class="space-x-4 hidden md:flex">
+            <span class="border-2 border-gray-300 flex justify-center items-center px-3 py-2 rounded-full"><i class="fa-solid fa-magnifying-glass bg-white rounded-full text-xl"></i></span>
+            <span class="border-2 border-gray-300 flex justify-center items-center px-3 py-2 rounded-full"><i class="fa-solid fa-cart-shopping bg-white rounded-full text-xl"></i></span>
+              <button class="btn btn-outline bg-[#ABEF5F]  font-extrabold text-base rounded-3xl border-none">Book Consult
+              <span><i class="fa-solid fa-arrow-right text-white bg-black p-2 rounded-full -rotate-45"></i></span></button>
+          </div>
+
+            <!-- hidden btn -->
+
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16" />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-ms dropdown-content bg-base-100 rounded-box z-[1] mt-3 p-2 shadow -translate-x-16 w-32">
+                <li><a>Home</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>Blogs</a></li>
+                <li><a>Contact Us</a></li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+   </nav>
+
+   <!-- header section -->
   <header class="container mx-auto px-4 md:px-6 lg:px-16">
     <!-- banner section -->
     <div class="banner-section w-11/12 mx-auto text-center space-y-7">
@@ -69,7 +128,7 @@
           <div class="text-content space-y-7 ">
             <div class="relative">
               <button class="btn btn-sm bg-white rounded-3xl"><i class="fa-solid fa-arrow-right"></i> About Us</button>
-              <img class="absolute -top-16 -left-16" src="assets/Vector.png" alt="">
+              <img class="absolute -top-16 -left-16 hidden md:flex" src="assets/Vector.png" alt="">
             </div>
             <h2 class="font-bold text-2xl lg:text-4xl">We design thoughtful, <br> liveable spaces</h2>
             <p>The barn house captivates with its blend of rustic charm and
@@ -190,6 +249,15 @@
             </div>
           </div>
        </div>
+     </section>
+
+
+     <!-- extra section -->
+
+     <section>
+      <div>
+
+      </div>
      </section>
 
      <!-- Let’s Connect section -->
